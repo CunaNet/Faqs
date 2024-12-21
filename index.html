@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Cambio de Facturación</title>
+    <style>
+        :root {
+            --primary-color: rgb(223,100,10);
+            --secondary-color: rgb(255,240,230);
+            --text-color: #333;
+            --border-color: rgb(223,100,10, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .category {
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .category-title {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.2em;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .question {
+            padding: 20px;
+            background-color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .question:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .question::after {
+            content: '+';
+            font-size: 1.5em;
+            color: var(--primary-color);
+        }
+
+        .question.active::after {
+            content: '-';
+        }
+
+        .answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+        }
+
+        .answer.show {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
+            .question {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Preguntas Frecuentes</h1>
+        <p style="font-size: 1.4em; color: #004080; font-weight: 500;">Cambio de emisor de facturas de GS1 Uruguay a Rondanet</p>
+    </div>
+
+    <!-- Facturación -->
+    <div class="category">
+        <div class="category-title">Sobre la Facturación</div>
+        <div class="faq-item">
+            <div class="question">¿Los planes y precios de los servicios cambiarán?</div>
+            <div class="answer">No, los planes y precios se mantendrán exactamente iguales.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿La forma de pago será la misma?</div>
+            <div class="answer">Sí, se mantienen las mismas formas de pago. Las facturas se podrán seguir pagando en las redes de cobranza Abitab.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Debo cambiar el proveedor en mis sistemas administrativos?</div>
+            <div class="answer">Sí, para identificar a Rondanet Ltda. como nuevo emisor de las facturas y poder realizar las Órdenes de Compra y los pagos correctamente, deberá actualizar los datos del proveedor en sus sistemas, cambiando de EAN Uruguay/GS1 Uruguay a RONDANET.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Las fechas de facturación serán las mismas?</div>
+            <div class="answer">Sí, las fechas de facturación no sufrirán modificaciones.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Qué pasa con las facturas pendientes de GS1?</div>
+            <div class="answer">Las facturas pendientes de pago emitidas por EAN Uruguay/GS1 Uruguay deberán pagarse directamente a GS1 Uruguay.</div>
+        </div>
+    </div>
+
+    <!-- Contrato y Servicio -->
+    <div class="category">
+        <div class="category-title">Sobre el Contrato y Servicio</div>
+        <div class="faq-item">
+            <div class="question">¿Debo firmar un nuevo contrato?</div>
+            <div class="answer">No hace falta. Se realizará una cesión de los contratos existentes que las empresas mantienen con GS1 Uruguay.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Qué pasa si no estoy de acuerdo con la cesión?</div>
+            <div class="answer">Le invitamos a ponerse en contacto con nosotros para entender su posición y discutir sus inquietudes.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿GS1 Uruguay seguirá involucrado en el servicio?</div>
+            <div class="answer">Sí, GS1 Uruguay continuará a cargo de la relación con los usuarios y el soporte técnico. Solo cambia el aspecto de la facturación.</div>
+        </div>
+    </div>
+
+    <!-- Operativa Diaria -->
+    <div class="category">
+        <div class="category-title">Sobre la Operativa Diaria</div>
+        <div class="faq-item">
+            <div class="question">¿Seguiré tratando con las mismas personas para el soporte?</div>
+            <div class="answer">Sí, se mantiene exactamente el mismo equipo de soporte y las mismas personas atendiendo sus consultas y necesidades.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Cambian los números de teléfono o emails de contacto?</div>
+            <div class="answer">No, se mantienen todos los canales de comunicación actuales sin cambios.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Habrá algún período de inactividad durante el cambio?</div>
+            <div class="answer">No, el servicio no se interrumpirá y no habrá ningún período de inactividad debido a este cambio.</div>
+        </div>
+    </div>
+
+    <!-- Aspectos Técnicos -->
+    <div class="category">
+        <div class="category-title">Aspectos Técnicos</div>
+        <div class="faq-item">
+            <div class="question">¿Los usuarios y contraseñas se mantienen igual?</div>
+            <div class="answer">Sí, todos los usuarios y contraseñas actuales permanecen exactamente iguales. No es necesario realizar ningún cambio en sus credenciales de acceso.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Los certificados digitales de mi empresa seguirán siendo válidos?</div>
+            <div class="answer">Sí, todos los certificados digitales actuales de la empresa mantienen su validez.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Las integraciones actuales seguirán funcionando?</div>
+            <div class="answer">Sí, todas las integraciones continuarán funcionando sin cambios.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Cambiará alguna URL o endpoint del servicio?</div>
+            <div class="answer">No, todas las URLs y endpoints se mantienen sin cambios.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Necesito hacer algún cambio en mi configuración?</div>
+            <div class="answer">Sí. Si bien para el uso de los servicios no necesita realizar ningún cambio en su configuración actual, deberá actualizar quién es su proveedor de facturación electrónica frente a la DGI. Para facilitar este proceso, le enviaremos un instructivo específico con los pasos a seguir para realizar este cambio.</div>
+        </div>
+    </div>
+
+    <!-- Datos y Seguridad -->
+    <div class="category">
+        <div class="category-title">Sobre Datos y Seguridad</div>
+        <div class="faq-item">
+            <div class="question">¿Qué pasa con la información histórica de mi empresa?</div>
+            <div class="answer">Toda la información histórica se mantiene sin cambios y con las mismas garantías de seguridad y confidencialidad.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿La confidencialidad de mis datos está garantizada?</div>
+            <div class="answer">Sí, se mantienen todos los estándares de seguridad y confidencialidad actuales.</div>
+        </div>
+    </div>
+
+    <!-- Sobre Rondanet -->
+    <div class="category">
+        <div class="category-title">Sobre Rondanet</div>
+        <div class="faq-item">
+            <div class="question">¿Rondanet es una empresa nueva?</div>
+            <div class="answer">No, Rondanet ha sido el socio tecnológico de GS1 Uruguay desde la fundación de la asociación, siendo responsable y propietaria de los sistemas informáticos e infraestructura, en la que se apoyan los servicios que dan en conjunto. Su nombre anterior era Centro Uruguayo de Numeración de Artículos (CUNA) y fue el primer miembro de GS1 para Uruguay, previo a que juntamente con otras organizaciones fundara EAN Uruguay (hoy GS1 Uruguay).</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Por qué se hace este cambio?</div>
+            <div class="answer">Este cambio se realiza para optimizar los procesos administrativos, manteniendo la misma calidad y características del servicio.</div>
+        </div>
+    </div>
+
+    <!-- Sobre Rondanet Retail -->
+    <div class="category">
+        <div class="category-title">Sobre Rondanet Retail</div>
+        <div class="faq-item">
+            <div class="question">¿Cambiarán los términos y condiciones de los servicios Rondanet Retail?</div>
+            <div class="answer">Los términos y condiciones se actualizarán únicamente para reflejar la inclusión de Rondanet como empresa prestadora del servicio. Todo el resto del contenido se mantiene exactamente igual.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Tendré que aceptar nuevos términos y condiciones al ingresar al sistema?</div>
+            <div class="answer">Sí, al ingresar al sistema web Rondanet Retail, se le solicitará aceptar los nuevos términos y condiciones. El único cambio en estos términos es la referencia a Rondanet como empresa prestadora del servicio en lugar de GS1 Uruguay. Todas las demás condiciones, derechos y obligaciones permanecen exactamente iguales.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">¿Qué pasa si no acepto los nuevos términos y condiciones?</div>
+            <div class="answer">Le invitamos a ponerse en contacto con nosotros para discutir cualquier inquietud que tenga sobre los nuevos términos y condiciones. Recuerde que el único cambio es la referencia a la empresa prestadora del servicio, manteniéndose inalteradas todas las demás condiciones.</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+
+                // Cerrar todas las respuestas
+                document.querySelectorAll('.question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('show');
+                });
+
+                // Si no estaba activa, mostrar la respuesta
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.classList.add('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
